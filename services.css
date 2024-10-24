@@ -1,0 +1,72 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a.active {
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    flex: 1 1 calc(50% - 20px); /* Adjust this to fit two items per row with gap */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-image {
+    height: 150px; /* Adjust height as needed */
+    background-color: #ccc;
+    margin-bottom: 10px;
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.contact {
+    margin-bottom: 10px;
+}

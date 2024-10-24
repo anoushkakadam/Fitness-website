@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav a {
+    color: #333;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+.signup-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #555;
+}
+
+/* Profile Menu */
+.profile-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-menu i {
+    font-size: 24px;
+    color: #333;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-menu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #333;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.hero-buttons button {
+    margin: 10px 10px 0 0;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero-buttons button:hover {
+    background-color: #555;
+}
+
+.hero-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-images img {
+    width: 500px;
+    height: 290px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 50px;
+}
+
+.ready-change {
+    background: #fff;
+    padding: 50px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    text-align: center;
+}
+
+.ready-change h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+}
+
+.ready-change p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.services {
+    background: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.services .service {
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 25px;
+}
+
+.services .service h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.services .service p {
+    font-size: 16px;
+    color: #666;
+}
+
+.classes {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.classes h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.classes .class {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.classes .class input {
+    margin: 0 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 20%;
+    text-align: center;
+}
+
+.coach {
+    background: #f9f9f9;
+    padding: 50px;
+    text-align: center;
+}
+
+.coach h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.coach p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.coaches {
+    display: flex;
+    justify-content: center;
+}
+
+.coaches .coach {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.coaches .coach img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.coaches .coach h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.coaches .coach p {
+    font-size: 16px;
+    color: #666;
+}
+
+.best-trainers {
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 25px;
+}
+
+.best-trainers h2 {
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.best-trainers img {
+    width: 500px;
+    height: 290px;
+    border-radius: 25px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact h3 {
+    margin-top: 0;
+}
+
+footer .footer-text p {
+    margin: 0;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add some styles for the new elements */
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .results {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="services.php">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>DON'T STOP TILL YOUR SUCCESS!</h1>
+                <p>GET FIT TO HAPPY</p>
+                <p>When we created gym base we knew we wanted more than just simple.</p>
+                <div class="hero-buttons">
+                    <input type="text" id="location-input" placeholder="Enter Location">
+                    <button id="location-button">Find Gyms</button>
+                </div>
+            </div>
+            <div class="hero-images">
+                <img src="./file (1).png" alt="Fitness Image 2">
+            </div>
+        </section>
+        <section class="results" id="results" style="display:none;">
+            <h2>Gyms in your area:</h2>
+            <ul id="gym-list"></ul>
+        </section>
+        <section class="ready-change">
+            <h2>Ready to make a change?</h2>
+            <p>Are you ready to transform your life and embrace a healthier, stronger you? We believe that every journey starts with a single step, and we're here to guide you every step of the way. Whether you're a seasoned athlete or just beginning your fitness adventure, our expert trainers, state-of-the-art facilities, and supportive community are ready to help you reach your goals. It's time to make a change—prioritize your health, push your limits, and discover the incredible potential within you. Let's get started on this empowering journey together!</p>
+        </section>
+        <section class="services">
+            <h2>Services we provide</h2>
+            <div class="service">
+                <h3>01 Fitness & Training</h3>
+                <p>Elevate your strength and stamina with personalized fitness and training programs.</p>
+            </div>
+            <div class="service">
+                <h3>02 Yoga</h3>
+                <p>Find balance and inner peace through mindful yoga practices.</p>
+            </div>
+            <div class="service">
+                <h3>03 Gymnastics</h3>
+                <p>Unleash your agility and grace with dynamic gymnastics routines.</p>
+            </div>
+            <div class="service">
+                <h3>04 Karate</h3>
+                <p>Master the art of self-discipline and defense with expert karate training.</p>
+            </div>
+        </section>
+        
+        <section class="coach">
+            <h2>It's About Who You Can Become</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit massa sit amet aliquam in fermentum nulla malesuada. Nisi, in fringilla in morbi molestie ultrices est. Mauris, ut in a mauris vitae risus viverra viverra ut et. Tincidunt malesuada viverra semper venenatis, massa cras risus. Viverra varius amet adipiscing nisi neque. Nunc, mauris eget mauris sed dignissim libero, vel. In consequat interdum semper facilisis. Nunc mi sed suspendisse cursus enim.</p>
+            <div class="coaches">
+                <div class="coach">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5602c3cce4b0f8716df3f66d/4e318372-6068-4cf1-a8dd-15b2ca67dff5/Online+Personal+Trainer.jpg" alt="Coach Liam">
+                    <h3>Liam</h3>
+                    <p>Cardio</p>
+                </div>
+                <div class="coach">
+                    <img src="https://t3.ftcdn.net/jpg/05/62/09/28/360_F_562092860_mWJBNRqTg4rarfoJaSdkaLlfy1dkrP33.jpg" alt="Coach Rachel">
+                    <h3>Rachel</h3>
+                    <p>Yoga</p>
+                </div>
+                <div class="coach">
+                    <img src="https://www.uscareerinstitute.edu/images/fitness-trainer-outcomes.jpg" alt="Coach Samuel">
+                    <h3>Samuel</h3>
+                    <p>Muscle</p>
+                </div>
+            </div>
+        </section>
+        <section class="best-trainers">
+            <h2>BEST TRAINERS OUT THERE</h2>
+            <img src="./file.png" alt="Best Trainer">
+        </section>
+    </main>
+    <footer>
+        <div class="contact">
+            <h3>Wellness Synergy</h3>
+            <p>Contact: 0987654321</p>
+            <p>Email: wellnessynergy@gmail.com</p>
+        </div>
+        <div class="footer-text">
+            <p>&copy; Anoushka Kadam 2024</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('location-button').addEventListener('click', function() {
+            var location = document.getElementById('location-input').value;
+            if (location) {
+                // Mockup gym data
+                var gyms = {
+                    "Pune": ["Air Life, Aundh ", "Dotfit, Baner ", "Metafit, Wakad & Pimple Saudagar"],
+                    "Mumbai": ["Reset, Bandra West", "Zion Fitness, Andheri East", "Anytime Fitness in Lokhandwala , Vile Parle West & Khar West"],
+                    "Delhi": ["Ozone", "Fluid Gym N Spa", "Cult Fit "],
+                    "Bangluru": ["Gym A", "Gym B", "Gym C "]
+                };
+                
+                var resultsSection = document.getElementById('results');
+                var gymList = document.getElementById('gym-list');
+                gymList.innerHTML = ""; // Clear previous results
+                
+                if (gyms[location]) {
+                    gyms[location].forEach(function(gym) {
+                        var li = document.createElement('li');
+                        li.textContent = gym;
+                        gymList.appendChild(li);
+                    });
+                    resultsSection.style.display = 'block';
+                } else {
+                    var li = document.createElement('li');
+                    li.textContent = "No gyms found in this location.";
+                    gymList.appendChild(li);
+                    resultsSection.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

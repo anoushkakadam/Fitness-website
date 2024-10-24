@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+.input-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section label,
+.input-section input,
+.input-section button {
+    margin-bottom: 10px;
+}
+
+.graph-section {
+    margin-top: 20px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+}
